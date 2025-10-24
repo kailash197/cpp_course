@@ -62,7 +62,7 @@ int main(){
     print_vector(robots); 
 
     Robot r{"ex", 2};
-    robots.assign({r});
+    robots.assign({r}); // clear and assign new elements
     print_vector(robots);
 
     return 0;
