@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>C++ Learning Roadmap</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 2em; background: #f9f9f9; }
+    h1, h2, h3 { color: #2c3e50; }
+    ul { margin-bottom: 1em; }
+    .section { background: #fff; padding: 1em; margin-bottom: 2em; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    a { color: #2980b9; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <h1>C++ Self-Learning Roadmap</h1>
+
+  <div class="section">
+    <h2>I. Basic Concepts</h2>
+    <ul>
+      <li>Variables and Data Types</li>
+      <li>Operators (Arithmetic, Logical, Bitwise)</li>
+      <li>Control Flow (if, switch, loops)</li>
+      <li>Functions and Overloading</li>
+      <li>Arrays and Strings</li>
+      <li>Pointers and References</li>
+      <li>Structures</li>
+      <li>Input/Output (cin, cout)</li>
+      <li>File Handling</li>
+      <li>Dynamic Memory (new, delete)</li>
+      <li>Namespaces</li>
+      <li>Header Files and Compilation Units</li>
+    </ul>
+    <p><strong>Resources:</strong> <a href="https://www.learncpp.com/">LearnCpp.com</a>, Bjarne Stroustrup's book</p>
+  </div>
+
+  <div class="section">
+    <h2>II. Intermediate Concepts</h2>
+    <ul>
+      <li>Object-Oriented Programming (OOP)</li>
+      <li>Inheritance and Polymorphism</li>
+      <li>Virtual Functions and Abstract Classes</li>
+      <li>Templates and Specialization</li>
+      <li>Exception Handling</li>
+      <li>Standard Template Library (STL)</li>
+      <li>Iterators and Algorithms</li>
+      <li>Operator Overloading</li>
+      <li>Type Casting</li>
+    </ul>
+    <p><strong>Resources:</strong> C++ Primer, <a href="https://en.cppreference.com/">cppreference.com</a></p>
+  </div>
+
+  <div class="section">
+    <h2>III. Advanced Concepts</h2>
+    <ul>
+      <li>RAII</li>
+      <li>Smart Pointers</li>
+      <li>Move Semantics and Rvalue References</li>
+      <li>Lambdas and Functors</li>
+      <li>std::function and std::bind</li>
+      <li>Multithreading</li>
+      <li>Type Traits and SFINAE</li>
+      <li>CRTP</li>
+      <li>Expression Templates</li>
+      <li>Custom Allocators</li>
+      <li>Design Patterns</li>
+    </ul>
+    <p><strong>Resources:</strong> Effective Modern C++, C++ Weekly (YouTube)</p>
+  </div>
+
+  <div class="section">
+    <h2>IV. C++11 Features</h2>
+    <ul>
+      <li>auto and Range-based for</li>
+      <li>Lambdas</li>
+      <li>Rvalue References</li>
+      <li>nullptr and Uniform Initialization</li>
+      <li>Smart Pointers</li>
+      <li>std::function, std::bind</li>
+      <li>constexpr, static_assert</li>
+      <li>Variadic Templates</li>
+      <li>Thread Library</li>
+      <li>enum class, override, final</li>
+    </ul>
+    <p><strong>Reference:</strong> <a href="https://eli.thegreenplace.net/2014/perfect-forwarding-and-universal-references-in-c/">Perfect Forwarding by Eli Bendersky</a></p>
+  </div>
+
+  <div class="section">
+    <h2>V. C++14 Features</h2>
+    <ul>
+      <li>Generic Lambdas</li>
+      <li>Return Type Deduction</li>
+      <li>std::make_unique</li>
+      <li>Variable Templates</li>
+      <li>decltype(auto)</li>
+      <li>Relaxed constexpr</li>
+      <li>std::integer_sequence</li>
+    </ul>
+    <p><strong>Reference:</strong> <a href="https://en.cppreference.com/w/cpp/14">C++14 Reference</a></p>
+  </div>
+
+  <div class="section">
+    <h2>VI. C++17 Features</h2>
+    <ul>
+      <li>Structured Bindings</li>
+      <li>if constexpr</li>
+      <li>Inline Variables</li>
+      <li>Fold Expressions</li>
+      <li>std::optional, std::variant, std::any</li>
+      <li>std::filesystem</li>
+      <li>std::string_view</li>
+      <li>Parallel STL Algorithms</li>
+      <li>Template Argument Deduction</li>
+      <li>std::scoped_lock</li>
+    </ul>
+    <p><strong>Reference:</strong> <a href="https://www.slideshare.net/slideshow/mastering-modern-c-c-11-c-14-c-17-c-20-c-23/275446486">Modern C++ Feature Summary</a></p>
+  </div>
+
+  <div class="section">
+    <h2>VII. C++20 Features</h2>
+    <ul>
+      <li>Concepts and Constraints</li>
+      <li>Ranges Library</li>
+      <li>Coroutines (`co_await`, `co_yield`, `co_return`)</li>
+      <li>Modules (experimental)</li>
+      <li>Three-way Comparison (`<=>`, the spaceship operator)</li>
+      <li>Calendar and Time Zones (`std::chrono` updates)</li>
+      <li>Expanded `constexpr` (e.g., `std::vector` in `constexpr`)</li>
+      <li>Immediate Functions (`consteval`)</li>
+      <li>Template Parameter Lists in Lambdas</li>
+      <li>Designated Initializers</li>
+      <li>Bit Manipulation Utilities (`std::rotl`, `std::countr_zero`, etc.)</li>
+      <li>`std::span` for lightweight array views</li>
+      <li>Improved `thread`, `atomic`, and synchronization primitives</li>
+    </ul>
+    <p><strong>Reference:</strong> <a href="https://en.cppreference.com/w/cpp/compiler_support/20">C++20 Feature Support</a></p>
+  </div>
+
+  <div class="section">
+    <h2>VIII. C++23 Features</h2>
+    <ul>
+      <li>Deduction Guides for `std::pair`, `std::tuple`, and `std::array`</li>
+      <li>`std::expected` for error handling</li>
+      <li>`std::print` and `std::println` (like Python’s `print()`)</li>
+      <li>`std::flat_map` and `std::flat_set` (sorted vector-based containers)</li>
+      <li>Multidimensional Subscript Operator (`operator[](...)`)</li>
+      <li>Monadic Operations for `std::optional`</li>
+      <li>Improved `constexpr` and `consteval` support</li>
+      <li>Unicode Character Support (`char8_t`, `std::u8string`)</li>
+      <li>Standard Library Modules (`std`, `std.compat`)</li>
+      <li>Stacktrace Library (`std::stacktrace`)</li>
+      <li>Ranges Improvements (`views::cartesian_product`, `views::chunk`, etc.)</li>
+    </ul>
+    <p><strong>Reference:</strong> <a href="https://en.cppreference.com/w/cpp/compiler_support/23">C++23 Feature Support</a></p>
+  </div>
+
+</body>
+</html>
