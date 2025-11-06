@@ -1,0 +1,21 @@
+title: "C++ Course"
+description: "Structured learning resources for mastering C++"
+url: "https://kailash197.github.io"
+baseurl: "/cpp_course" # This must match your repo name
+
+markdown: kramdown
+theme: minima
+
+# Source folder for your Markdown content
+source: docs
+
+# Optional: enable plugins supported by GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Optional: exclude files from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
