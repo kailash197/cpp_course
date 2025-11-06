@@ -85,7 +85,7 @@ title: C++ Self-Learning Roadmap
 ---
 
 ## VI. C++17 Features
-- Structured Bindings  
+- [Structured Bindings](structured_binding.md)
 - `if constexpr`  
 - Inline Variables  
 - Fold Expressions  
