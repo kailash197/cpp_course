@@ -59,7 +59,7 @@
 
 #### **Lookup Performance Across C++17 Containers**
 
-| Container               | `.find()` Available | `.find()` Complexity     | `std::find()` Complexity | Notes |
+| Container              | `.find()` Available | `.find()` Complexity     | `std::find()` Complexity | Notes |
 |------------------------|---------------------|---------------------------|---------------------------|-------|
 | `std::vector`          | No               | —                         | $O(n)$                | Linear scan only |
 | `std::list`            | No               | —                         | $O(n)$                | Doubly-linked list |

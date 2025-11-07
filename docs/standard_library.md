@@ -59,7 +59,7 @@ Performance is a priority—often matching or exceeding hand-written code.
   - Examples: `sort`, `find`, `accumulate`, `count`, `reverse`
   - Generic and decoupled from container implementations.
   <!-- - [Algorithms]({{basealgorithms.md) -->
-  - [Algorithms]({{ site.baseurl }}/Algorithms/algorithm.md)
+  - [Algorithms]({{ site.baseurl }}/Algorithms/algorithm.html)
 
 - **Iterators**: Abstract access to container elements.
   - Types: `input_iterator`, `output_iterator`, `forward_iterator`, `bidirectional_iterator`, `random_access_iterator`
