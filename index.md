@@ -29,7 +29,7 @@ title: C++ Self-Learning Roadmap
 - Virtual Functions and Abstract Classes  
 - Templates and Specialization  
 - Exception Handling  
-- [Standard Template Library (STL)](standard_library.md)
+- [Standard Template Library (STL)]({{ site.baseurl }}/docs/standard_library.html)
 - Iterators and Algorithms  
 - Operator Overloading  
 - Type Casting  
