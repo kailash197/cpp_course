@@ -51,7 +51,7 @@ title: C++ Self-Learning Roadmap
 - Custom Allocators  
 - Design Patterns  
 
-**Resources:** Effective Modern C++, C++ Weekly (YouTube)
+**Resources:** Effective Modern C++, [C++ Weekly](https://www.youtube.com/@cppweekly)
 
 ---
 
