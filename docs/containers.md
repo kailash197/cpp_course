@@ -54,6 +54,7 @@ C++ containers fall into three broad categories:
 ### `std::map`
 - Stores key-value pairs with unique keys, sorted by key.
 - Also tree-based, with logarithmic time operations.
+- [Maps](maps.md)
 
 ### `std::unordered_map`
 - Stores key-value pairs with unique keys, but **not sorted**.

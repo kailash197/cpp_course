@@ -58,8 +58,7 @@ Performance is a priority—often matching or exceeding hand-written code.
 - **Algorithms**: Operate on containers via iterators.
   - Examples: `sort`, `find`, `accumulate`, `count`, `reverse`
   - Generic and decoupled from container implementations.
-  <!-- - [Algorithms]({{basealgorithms.md) -->
-  - [Algorithms]({{ site.baseurl }}/Algorithms/algorithm.html)
+  - [Algorithms](algorithms.md)
 
 - **Iterators**: Abstract access to container elements.
   - Types: `input_iterator`, `output_iterator`, `forward_iterator`, `bidirectional_iterator`, `random_access_iterator`
@@ -94,6 +93,11 @@ Performance is a priority—often matching or exceeding hand-written code.
 - **Filesystem Support**: File and directory manipulation via `<filesystem>`.
 - **Random Number Generation**: Robust and flexible RNG via `<random>`.
 - **Customization and Extension**: Traits, allocators, and policy-based design patterns.
+
+- **`<utility>` header**: a collection of general-purpose utility components
+  - widely used in modern C++ programming
+  - introduced in C++98 and has been expanded in later standards like C++11, C++14, C++17, and C++20.
+  - [<utility> header](utility_header.md)
 
 ---
 
