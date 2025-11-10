@@ -25,6 +25,7 @@ C++ containers fall into three broad categories:
 ---
 
 ## Sequence Containers
+- store elements in order
 
 ### `std::vector`
 - Dynamic array with contiguous storage.
@@ -45,16 +46,29 @@ C++ containers fall into three broad categories:
 ---
 
 ## Associative Containers
+- provide mapping of keys to values
+- generally offer equivalent insertion, lookup and deletion time
+- 
+- two category: 
+    1. Ordered Associative Containers
+        - stores element in sorted, tree like data structure
+        - `set`, `multiset`, `map` and `multimap`
+    2. Unordered Associative Containers
+        - `unordered_map`, `unordered_multimap`, `unordered_set`, and `unordered_multiset`.
 
 ### `std::set`
 - Stores unique elements in sorted order.
 - Backed by a balanced binary tree (usually red-black).
 - Fast lookup, insertion, and deletion.
 
+### `std::mutliset`
+
 ### `std::map`
 - Stores key-value pairs with unique keys, sorted by key.
 - Also tree-based, with logarithmic time operations.
 - [Maps](maps.md)
+
+### `std::multimap`
 
 ### `std::unordered_map`
 - Stores key-value pairs with unique keys, but **not sorted**.
