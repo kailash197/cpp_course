@@ -72,18 +72,37 @@
 ---
 
 #### `operator[]`
+- insert elements into a `map` through the overloaded `operator[]`
 - Always succeeds.
 - **Creates** a new element if key doesn’t exist.
 - **Replaces** value if key exists.
 - Requires default constructor for value type.
 - **Not const**, so can't be used on `const map`.
 
-**Example:**
-```cpp
-dataMap[1] = Data(4);
-dataMap[1] = Data(6); // Replaces value
-dataMap[1].setValue(100); // Modify value directly
-```
+- Example:
+    ```cpp
+    // using operator[]
+    points["Harry"] = 34;
+    print(points);
+    points["Mark"] = 55;
+    std::cout << points["Mark"] <<std::endl;
+    print(points);
+    ```
+- Output:
+    ```
+    { Harry: 34, Joe: 45, Mark: 25 }
+    55
+    { Harry: 34, Joe: 45, Mark: 55 }
+    ```
+- Caveat:
+    - always creates a new value object even if it doesn't need to use it.
+    - so `operator[]` is not `const`, which means the following code won't compile even though it seems to access only
+    - use `find()` instead
+    ```cpp
+    void func(const map<int, int>& m) {
+    cout << m[1] << endl; // Error
+    }
+    ```
 
 ---
 

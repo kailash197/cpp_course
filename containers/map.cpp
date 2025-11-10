@@ -19,4 +19,11 @@ int main(){
     if (result1.second) std::cout << "Insertion success" <<std::endl;
     else std::cout << "Value Overwritten" <<std::endl;
     print(points);
+
+    // using operator[]
+    points["Harry"] = 34;
+    print(points);
+    points["Mark"] = 55;
+    std::cout << points["Mark"] <<std::endl;
+    print(points);
 }
