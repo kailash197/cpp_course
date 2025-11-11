@@ -2,6 +2,19 @@
 #include <map>
 #include "../utilities/print_utils.hpp"
 
+class Data{
+    private:
+        int data;
+    
+    public:
+        Data() = default;
+        
+        Data(int d): data(d) {}
+        int getData() const{
+            return data;
+        }
+};
+
 
 int main(){
     std::map<std::string, int> points;
@@ -26,4 +39,23 @@ int main(){
     points["Mark"] = 55;
     std::cout << points["Mark"] <<std::endl;
     print(points);
+
+    // using emplace
+    std::map<int, Data> map1;
+    auto res = map1.insert({1, 2}); // automatically calls Data(int d)
+    for (const auto& v: map1){
+        std::cout << v.first << "  =>  " << v.second.getData() << std::endl;
+    }
+
+    
+    std::map<int, std::string> myMap;
+
+    auto [it1, inserted1] = myMap.emplace(1, "ROS2");
+    auto [it2, inserted2] = myMap.emplace(1, "Robotics"); // Key exists
+
+    std::cout << "First insert: " << inserted1 << "\n"; // true
+    std::cout << "Second insert: " << inserted2 << "\n"; // false
+    std::cout << "Value for key 1: " << it2->second << "\n"; // ROS2
+
+    return 0;
 }

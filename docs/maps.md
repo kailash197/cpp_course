@@ -106,13 +106,119 @@
 
 ---
 
-### **4. `emplace()`, `emplace_hint()`**
-- Constructs elements **in-place**.
-- More efficient than `insert()` in some cases.
+#### `emplace()`
+- **Purpose**: Constructs an object **in-place** directly within the container, avoiding unnecessary copies or moves.
+- **Efficiency**: Often more efficient than `insert()` because it constructs the object directly using the provided arguments.
+- **Usage**: Available in containers like `std::vector`, `std::list`, `std::map`, `std::set`, etc.
+- Example with `std::map`:
+    ```cpp
+    std::map<int, std::string> myMap;
+    myMap.emplace(1, "Khadka"); // Constructs pair<int, string> in-place
+    ```
+- If key exists:
+    - `emplace()` does nothing if the key already exists, does not overwrite the existing value.
+    - but still evaluates the constructor arguments you pass (unlike `try_emplace()` which avoids this).
+    - returns an iterator to the existing element and a bool indicating whether insertion happened.
+    - Example:
+        ```cpp
+        #include <iostream>
+        #include <map>
 
-### **5. `try_emplace()` (C++17)**
+        class Data {
+        public:
+            Data(int x) {
+                std::cout << "Data constructor called with " << x << "\n";
+            }
+        };
+
+        int main() {
+            std::map<int, Data> myMap;
+
+            // First emplace: key doesn't exist
+            auto [it1, inserted1] = myMap.emplace(1, 10);
+            std::cout << "Inserted1: " << inserted1 << "\n";
+
+            // Second emplace: key exists, but constructor still called
+            auto [it2, inserted2] = myMap.emplace(1, 99);
+            std::cout << "Inserted2: " << inserted2 << "\n";
+
+            return 0;
+        }
+        ```
+    - Output:
+        ```
+        Data constructor called with 10
+        Inserted1: 1
+        Data constructor called with 99
+        Inserted2: 0
+        ```
+
+---
+
+#### `emplace_hint()`
+- **Purpose**: Similar to `emplace()`, but used with **ordered associative containers** like `std::map` and `std::set`.
+- **Hint**: Accepts an iterator as a hint to where the element should be inserted, potentially improving performance.
+- **Efficiency**: Can be faster than `emplace()` if the hint is correct.
+
+- Example with `std::map`:
+    ```cpp
+    std::map<int, std::string> myMap;
+    auto it = myMap.begin();
+    myMap.emplace_hint(it, 2, "ROS2"); // Uses hint to optimize insertion
+    ```
+
+---
+
+
+#### `try_emplace()` (C++17)
 - Inserts in-place **only if key doesn’t exist**.
 - Does **nothing** if key exists.
+- Example:
+    ```cpp
+    #include <iostream>
+    #include <map>
+
+    class Data {
+    public:
+        Data(int x) {
+            std::cout << "Data constructor called with " << x << "\n";
+        }
+    };
+
+    int main() {
+        std::map<int, Data> myMap;
+
+        // First emplace: key doesn't exist
+        auto [it1, inserted1] = myMap.emplace(1, 10);
+        std::cout << "Inserted1: " << inserted1 << "\n";
+
+        // Second emplace: key exists, but constructor still called
+        auto [it2, inserted2] = myMap.emplace(1, 99);
+        std::cout << "Inserted2: " << inserted2 << "\n";
+
+
+        // First try_emplace: key doesn't exist
+        auto [it3, inserted3] = myMap.try_emplace(2, 10);
+        std::cout << "Inserted1: " << inserted3 << "\n";
+
+        // Second try_emplace: key exists, constructor NOT called
+        auto [it4, inserted4] = myMap.try_emplace(2, 99);
+        std::cout << "Inserted2: " << inserted4 << "\n";
+
+
+        return 0;
+    }
+    ```
+- Output:
+    ```
+    Data constructor called with 10
+    Inserted1: 1
+    Data constructor called with 99
+    Inserted2: 0
+    Data constructor called with 10
+    Inserted1: 1
+    Inserted2: 0
+    ```
 
 ---
 
