@@ -27,12 +27,19 @@ Three are three basic parts in a C++ program.
 	- Single line comments begin with `//` followed by texts
 	- Multi-line comments are enlosed within `/*` and `*/`
 	- Comments are ignored by compilers and are not part of the program execution.
-2. Preprocessor Directives
+2. [Preprocessor Directives]({{ site.baseurl }}/docs/preprocessor.html)
 3. `main()` function
+
 --- 
 
 ## Build and Run a program
 There are three stages in building:
 1. Preprocessing
-2. Compilation
-3. Linking
+	- run through preprocessor
+	- Preprocessor recognizes meta-information about the code
+2. Compilation:
+	- translation of code to machine-readable object files
+3. Linking:
+	- the individual object files are linked togther into a single application
+
+---
