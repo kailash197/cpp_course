@@ -9,7 +9,7 @@ title: C++ Self-Learning Roadmap
 
 # CONTENTS
 - [Basics of C++]({{ site.baseurl }}/docs/basics.html)
-- Variables and Data Types  
+- [Literals, Variables and Data Types]({{ site.baseurl }}/docs/literal_variable_datatypes.html)  
 - Operators (Arithmetic, Logical, Bitwise)  
 - Control Flow (if, switch, loops)  
 - Functions and Overloading  
