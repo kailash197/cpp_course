@@ -1,0 +1,40 @@
+# VS Code
+.vscode/
+*.code-workspace
+
+# Compiled Object files
+*.o
+*.obj
+*.exe
+*.out
+*.app
+
+# Build directories
+build/
+bin/
+dist/
+cmake-build-*/
+
+# IDE files
+.idea/
+*.swp
+*.swo
+*~
+
+# Debug files
+*.dSYM/
+*.pdb
+
+# Backup files
+*.bak
+*.tmp
+
+# Compiled output from compilation
+*.class
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
