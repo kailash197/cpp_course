@@ -6,6 +6,9 @@ title: C++ Self-Learning Roadmap
 # C++ Self-Learning Roadmap
 
 ## I. Basic Concepts
+
+# CONTENTS
+- [Basics of C++]({{ site.baseurl }}/docs/basics.html)
 - Variables and Data Types  
 - Operators (Arithmetic, Logical, Bitwise)  
 - Control Flow (if, switch, loops)  
