@@ -28,7 +28,7 @@ Three are three basic parts in a C++ program.
 	- Multi-line comments are enlosed within `/*` and `*/`
 	- Comments are ignored by compilers and are not part of the program execution.
 2. [Preprocessor Directives]({{ site.baseurl }}/docs/preprocessor.html)
-3. `main()` function
+3. [`main()` function]({{ site.baseurl }}/docs/main.html)
 
 --- 
 
